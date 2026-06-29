@@ -68,6 +68,16 @@ a {
 
 a:hover { color: #6e2e2e; }
 
+/* Видимый фокус для клавиатуры */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.section--dark :focus-visible {
+  outline-color: #d4a0a0;
+}
+
 .muted { color: var(--text-secondary); font-size: 0.9375rem; }
 
 .tag {
