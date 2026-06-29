@@ -19,6 +19,11 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -397,9 +402,17 @@ mark.uncertain {
   margin: 2rem 0;
 }
 
+.guide-box__note { margin-bottom: 0.75rem; }
+
 .guide-box ol {
   margin: 0;
   padding-left: 1.25rem;
+}
+
+/* подсказка под полем формы */
+.form-hint {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
 }
 
 .guide-box li { margin-bottom: 0.5em; }
