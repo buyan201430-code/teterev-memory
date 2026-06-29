@@ -95,7 +95,7 @@ a:hover { color: #6e2e2e; }
 .tag--review { border-color: var(--review); color: #7a6208; }
 .tag--newspaper { border-color: var(--accent); color: var(--accent); }
 
-blockquote, .quote {
+blockquote {
   font-family: var(--font-mono);
   font-size: 0.9375rem;
   margin: 1.25em 0;
@@ -105,7 +105,7 @@ blockquote, .quote {
   color: var(--text);
 }
 
-blockquote cite, .quote-source {
+blockquote cite {
   display: block;
   margin-top: 0.75em;
   font-size: 0.8125rem;
@@ -571,10 +571,6 @@ mark.uncertain {
   cursor: pointer;
 }
 
-.form-submit {
-  margin-top: 1.5rem;
-}
-
 .form-success {
   background: var(--card);
   border: 1px solid var(--verified);
@@ -810,71 +806,39 @@ mark.uncertain {
 
 /* --- Contrast fix: light cards on dark sections --- */
 
-.dark-section .card,
 .section--dark .card,
-.dark-section .person-row,
-.section--dark .person-row,
-.dark-section .profile-card,
-.section--dark .profile-card,
 .section--dark .bio-card,
-.teterev-card,
-.looking-row,
-.looking-person,
 .section--dark .people-list li {
   background: #FFFDF8;
   color: #1A1A1A;
 }
 
-.dark-section .card *,
 .section--dark .card *,
-.dark-section .person-row *,
-.section--dark .person-row *,
-.dark-section .profile-card *,
-.section--dark .profile-card *,
 .section--dark .bio-card *,
-.teterev-card *,
-.looking-row *,
-.looking-person *,
 .section--dark .people-list li * {
   color: inherit;
   opacity: 1;
 }
 
-.looking-row strong,
-.looking-person strong,
-.person-name,
 .section--dark .people-list__name {
   color: #1A1A1A;
   font-weight: 700;
 }
 
-.looking-row span,
-.looking-person span,
-.person-note,
-.card-muted,
 .section--dark .people-list__note {
   color: #5E5850;
   opacity: 1;
 }
 
-.dark-section h2,
-.section--dark h2,
-.dark-section .section-title,
-.section--dark .section-title {
+.section--dark h2 {
   color: #FFFDF8;
 }
 
-.dark-section p,
 .section--dark p,
-.dark-section .section-lead,
-.section--dark .section-lead,
 .section--dark .section__lead {
   color: #D8D0C3;
 }
 
-.badge,
-.status,
-.mark,
 .section--dark .tag {
   color: #8B3A3A;
   background: #F4F0E8;
