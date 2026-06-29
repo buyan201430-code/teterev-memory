@@ -169,9 +169,11 @@ mark.uncertain {
 
 .nav-toggle {
   display: none;
-  background: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   border: 1px solid var(--border);
-  padding: 0.4rem 0.65rem;
+  padding: 0.4rem 0.85rem;
   font-size: 0.875rem;
   cursor: pointer;
   background: var(--card);
@@ -355,6 +357,9 @@ mark.uncertain {
 }
 
 .filter-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -487,6 +492,9 @@ mark.uncertain {
 }
 
 .form-tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 0.8125rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--border);
@@ -641,6 +649,11 @@ mark.uncertain {
 
 .mobile-bar a {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   text-align: center;
   font-size: 0.6875rem;
   text-decoration: none;
@@ -665,7 +678,7 @@ mark.uncertain {
   }
 
   .nav-toggle {
-    display: block;
+    display: inline-flex;
     position: relative;
     z-index: 202;
   }
