@@ -677,7 +677,8 @@ mark.uncertain {
     left: 0;
     right: 0;
     width: 100%;
-    max-height: calc(100vh - var(--header-h));
+    height: calc(100vh - var(--header-h));
+    height: calc(100dvh - var(--header-h));
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     flex-direction: column;
@@ -715,6 +716,7 @@ mark.uncertain {
     background: #FFFDF8;
   }
 
+  html.is-nav-open,
   body.is-nav-open {
     overflow: hidden;
   }

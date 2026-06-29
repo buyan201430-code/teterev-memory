@@ -10,6 +10,7 @@
     if (!nav || !toggle) return;
     nav.classList.toggle('is-open', open);
     body.classList.toggle('is-nav-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.textContent = open ? 'Закрыть' : 'Меню';
   }
