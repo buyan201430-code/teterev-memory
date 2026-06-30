@@ -608,6 +608,55 @@ mark.uncertain {
   overflow-wrap: break-word;
 }
 
+/* Archive scans */
+.scan-block__title {
+  margin-top: 2.5rem;
+}
+
+.scan-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .scan-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.scan-figure {
+  margin: 1.25rem 0 0;
+}
+
+.scan-figure a {
+  display: block;
+}
+
+.scan-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.scan-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.scan-figure--portrait {
+  max-width: 22rem;
+  margin: 0 0 1.5rem;
+}
+
+.section--dark .scan-figure figcaption {
+  color: #D8D0C3;
+}
+
 /* Bio card */
 .bio-card {
   background: var(--card);
