@@ -761,10 +761,6 @@ mark.uncertain {
     padding-bottom: calc(120px + env(safe-area-inset-bottom));
   }
 
-  main {
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-  }
-
   .site-footer {
     padding-bottom: 2.5rem;
   }
