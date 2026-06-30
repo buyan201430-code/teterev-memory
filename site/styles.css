@@ -716,8 +716,8 @@ mark.uncertain {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: #F4F0E8;
-    border-bottom: 1px solid #C8BDAA;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
     padding: 0.5rem 0;
     padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
     z-index: 201;
@@ -732,7 +732,7 @@ mark.uncertain {
     display: block;
     font-size: 1rem;
     line-height: 1.4;
-    color: #1A1A1A;
+    color: var(--text);
     text-decoration: none;
     padding: 0.85rem 1.25rem;
     border-bottom: 1px solid rgba(200, 189, 170, 0.55);
@@ -744,8 +744,8 @@ mark.uncertain {
 
   .site-nav a:hover,
   .site-nav a.is-active {
-    color: #8B3A3A;
-    background: #FFFDF8;
+    color: var(--accent);
+    background: var(--card);
   }
 
   html.is-nav-open,
@@ -822,8 +822,8 @@ mark.uncertain {
 .section--dark .card,
 .section--dark .bio-card,
 .section--dark .people-list li {
-  background: #FFFDF8;
-  color: #1A1A1A;
+  background: var(--card);
+  color: var(--text);
 }
 
 .section--dark .card *,
@@ -834,17 +834,17 @@ mark.uncertain {
 }
 
 .section--dark .people-list__name {
-  color: #1A1A1A;
+  color: var(--text);
   font-weight: 700;
 }
 
 .section--dark .people-list__note {
-  color: #5E5850;
+  color: var(--text-secondary);
   opacity: 1;
 }
 
 .section--dark h2 {
-  color: #FFFDF8;
+  color: var(--card);
 }
 
 .section--dark p,
@@ -853,17 +853,17 @@ mark.uncertain {
 }
 
 .section--dark .tag {
-  color: #8B3A3A;
-  background: #F4F0E8;
-  border: 1px solid #C8BDAA;
+  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--border);
 }
 
 .section--dark .card__excerpt {
-  color: #5E5850;
+  color: var(--text-secondary);
 }
 
 .section--dark .card__link {
-  color: #8B3A3A;
+  color: var(--accent);
 }
 
 .section--dark a:not(.btn) {
@@ -872,10 +872,10 @@ mark.uncertain {
 
 .section--dark .bio-card dd,
 .section--dark .bio-card p {
-  color: #1A1A1A;
+  color: var(--text);
 }
 
 .section--dark .bio-card dt {
-  color: #5E5850;
+  color: var(--text-secondary);
 }
 
