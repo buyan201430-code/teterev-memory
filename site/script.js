@@ -69,7 +69,9 @@
       var filter = btn.getAttribute('data-filter');
 
       filterBtns.forEach(function (b) {
-        b.classList.toggle('is-active', b === btn);
+        var active = b === btn;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
 
       archiveCards.forEach(function (card) {
@@ -84,17 +86,34 @@
   var formTabs = document.querySelectorAll('.form-tab');
   var formPanels = document.querySelectorAll('.form-panel');
 
-  formTabs.forEach(function (tab) {
+  function activateTab(tab, setFocus) {
+    var target = tab.getAttribute('data-form');
+
+    formTabs.forEach(function (t) {
+      var active = t === tab;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+      t.setAttribute('tabindex', active ? '0' : '-1');
+    });
+
+    formPanels.forEach(function (panel) {
+      panel.classList.toggle('is-active', panel.getAttribute('data-form') === target);
+    });
+
+    if (setFocus) tab.focus();
+  }
+
+  formTabs.forEach(function (tab, index) {
     tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-form');
+      activateTab(tab, false);
+    });
 
-      formTabs.forEach(function (t) {
-        t.classList.toggle('is-active', t === tab);
-      });
-
-      formPanels.forEach(function (panel) {
-        panel.classList.toggle('is-active', panel.getAttribute('data-form') === target);
-      });
+    tab.addEventListener('keydown', function (e) {
+      var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!dir) return;
+      e.preventDefault();
+      var next = (index + dir + formTabs.length) % formTabs.length;
+      activateTab(formTabs[next], true);
     });
   });
 

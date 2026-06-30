@@ -112,12 +112,12 @@
         <p class="section__lead muted">Каталог материалов. Фильтры — визуальные, без базы данных на этом этапе.</p>
 
         <div class="filters" role="group" aria-label="Фильтр архива">
-          <button class="filter-btn is-active" type="button" data-filter="all">Все</button>
-          <button class="filter-btn" type="button" data-filter="newspaper">Газеты</button>
-          <button class="filter-btn" type="button" data-filter="photo">Фото</button>
-          <button class="filter-btn" type="button" data-filter="interview">Интервью</button>
-          <button class="filter-btn" type="button" data-filter="fact">Факты</button>
-          <button class="filter-btn" type="button" data-filter="people">Люди</button>
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button class="filter-btn" type="button" data-filter="newspaper" aria-pressed="false">Газеты</button>
+          <button class="filter-btn" type="button" data-filter="photo" aria-pressed="false">Фото</button>
+          <button class="filter-btn" type="button" data-filter="interview" aria-pressed="false">Интервью</button>
+          <button class="filter-btn" type="button" data-filter="fact" aria-pressed="false">Факты</button>
+          <button class="filter-btn" type="button" data-filter="people" aria-pressed="false">Люди</button>
         </div>
 
         <div class="card-grid">
@@ -342,13 +342,13 @@
         </div>
 
         <div class="form-tabs" role="tablist">
-          <button class="form-tab is-active" type="button" data-form="memory" role="tab">Воспоминание</button>
-          <button class="form-tab" type="button" data-form="photo" role="tab">Фото / документ</button>
-          <button class="form-tab" type="button" data-form="name" role="tab">Имя ученика</button>
+          <button class="form-tab is-active" type="button" data-form="memory" role="tab" id="tab-memory" aria-selected="true" aria-controls="panel-memory" tabindex="0">Воспоминание</button>
+          <button class="form-tab" type="button" data-form="photo" role="tab" id="tab-photo" aria-selected="false" aria-controls="panel-photo" tabindex="-1">Фото / документ</button>
+          <button class="form-tab" type="button" data-form="name" role="tab" id="tab-name" aria-selected="false" aria-controls="panel-name" tabindex="-1">Имя ученика</button>
         </div>
 
         <!-- Форма 1 -->
-        <div class="form-panel is-active form-card" data-form="memory" role="tabpanel">
+        <div class="form-panel is-active form-card" data-form="memory" role="tabpanel" id="panel-memory" aria-labelledby="tab-memory" tabindex="0">
           <form action="#" method="post" novalidate>
             <div class="form-group">
               <label for="mem-name">Имя <span class="req">*</span></label>
@@ -394,7 +394,7 @@
         </div>
 
         <!-- Форма 2 -->
-        <div class="form-panel form-card" data-form="photo" role="tabpanel">
+        <div class="form-panel form-card" data-form="photo" role="tabpanel" id="panel-photo" aria-labelledby="tab-photo" tabindex="0">
           <form action="#" method="post" novalidate>
             <div class="form-group">
               <label for="ph-name">Имя <span class="req">*</span></label>
@@ -438,7 +438,7 @@
         </div>
 
         <!-- Форма 3 -->
-        <div class="form-panel form-card" data-form="name" role="tabpanel">
+        <div class="form-panel form-card" data-form="name" role="tabpanel" id="panel-name" aria-labelledby="tab-name" tabindex="0">
           <form action="#" method="post" novalidate>
             <div class="form-group">
               <label for="stu-name">ФИО ученика <span class="req">*</span></label>
