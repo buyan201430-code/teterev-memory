@@ -657,6 +657,11 @@ mark.uncertain {
   color: #D8D0C3;
 }
 
+/* подпись внутри светлой карточки на тёмной секции — тёмный текст */
+.section--dark .bio-card .scan-figure figcaption {
+  color: var(--text-secondary);
+}
+
 /* Bio card */
 .bio-card {
   background: var(--card);
